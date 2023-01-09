@@ -1,0 +1,761 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+:root{
+    --main-color: rgba(16, 164, 16, 0.809);
+    --hover-color: rgb(14, 234, 14);
+}
+
+/* ! Tüm HTML'de Uygulanacak Ölçüler */
+html{
+    font-size: 62.5%; /*? Artık 1 rem 10px*/
+    overflow-x: hidden; /*? yatay scroll kapalı*/
+    scroll-padding: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color:black;
+}
+
+
+
+body{
+  
+    background-color: #fff;
+}
+
+section{
+    padding: 3.5rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 2.75rem;
+    border-radius: 30rem;
+    font-size: 1.7rem;
+    color: black;
+    background-color: var(--main-color);
+    text-decoration: none;
+    border: 1px solid ;
+}
+.btn:hover{
+    background-color: var(--hover-color);
+    color: #fff;
+    border: solid var(--hover-color);
+    box-shadow: 0px 0px 10px 0px var(--hover-color);
+    opacity: 0.8;
+}
+
+.search-input{
+    font-size: 1.6rem;
+    color: black;
+    padding: 1rem;
+    text-transform: none;
+    border-radius: 3rem;
+ }
+
+.heading{
+    color: rgb(7, 117, 3);
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid var(--main-color);
+}
+.heading span{
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: rgba(4, 102, 21, 0.581);
+    
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+}
+
+/* * Header start */
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 75%);
+    transform: scaleY(0);
+}
+
+.header .search-form.active{
+    transform: scaleY(1);
+}
+
+.header .search-form i{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: black;
+}
+
+.header .search-form input {
+    width: 100%;
+}
+
+.header .logo{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 30px;
+    object-fit: cover;
+    padding: 0 0;
+}
+.header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   padding: 0rem 6%; /*? y ekseni 0 x ekseni 7% */
+   border-radius: 30rem;
+   margin: 2rem 7rem;
+   box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+   position: sticky;
+   top: 0;
+   z-index: 1000; /*? Hep Önde Kalmasını Sağlıyor */
+}
+/* *Navbar start */
+
+.header .navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid transparent; 
+}
+
+.header .navbar .active,
+.navbar a:hover{
+    animation: 4ms;
+    transition: 1,6ms;
+    color: var(--hover-color);
+    border-bottom: 0.1rem solid;
+    border-color: var(--hover-color);
+}
+
+/* !Navbar end */
+
+.header .buttons button{
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+
+.header .card-items-container{
+    position: absolute;
+    top: 95%;
+    height: calc(100vh - 9rem);
+    width: 35rem;
+    background-color: #fff;
+    box-shadow: 0px 20px 14px 0px rgba(0, 0, 0, 0.75);
+    right: -100%;
+}
+
+.header .card-items-container.active{
+    right: 3rem;
+}
+
+.header .card-items-container .card-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.header .card-items-container .card-item:hover{
+    box-shadow: 0px 20px 14px 0px rgba(0, 0, 0, 75%);
+}
+
+.header .card-items-container .card-item .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer; /*? Fare üzerine gelince işaretçi değişiyor*/
+    color: black;
+}
+
+
+
+.header .card-items-container .card-item img{
+    height: 7rem; 
+}
+
+.header .card-items-container .card-item .content h3{
+    font-size: 2rem;
+    color: black;
+    padding-bottom: 0.5rem;
+}
+
+.header .card-items-container .card-item .content .price{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.header .card-items-container .btn {
+    width: 100%;
+    text-align: center;
+    border-radius: unset;
+}
+#menu-btn {
+    display: none;
+}
+/* ! Header end */
+
+
+/* * Home start */
+.home{
+    background: url(./img/pexels-s-migaj-747964.jpg);
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    background-position: center;
+    margin-top: -19.9rem;
+    display: flex;
+    align-items: center;
+   
+}
+.home .content{
+    max-width: 60rem;
+    
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #fff;
+
+}
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+    color: #ccc;
+    margin: 30px;
+    margin-left: 0;
+
+}
+.home .content a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--main-color);
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 3rem;
+   
+
+}
+.home .content a:hover{
+    margin: 20px; /*? fare üzerine gelince birbirlerinden ayrılıyorlar.  */
+    color: #fff;
+    background-color: var(--hover-color);
+    box-shadow: 0px 0px 20px 0px var(--hover-color);
+}
+/* ! Home end */
+
+/* * Sweatshirt Product Start */
+
+.product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /*? yan yana sıralamayı sağladı*/
+    gap: 1.5rem;
+}
+
+.product .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.product .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2.5rem;
+}
+
+.product .box-container .box:hover img{
+    transform: scale(1.1);
+}
+.product .box-container .box .product-category{
+    font-size: 1.6rem;
+  
+}
+.product .box-container .box h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.product .box-container .box .price{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+.product .box-container .box .price span{
+    text-decoration: line-through;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* ! Sweatshirt Product End */
+
+/* * T-shirt Product start */
+
+.t-product{
+    background-color: rgb(205, 235, 227);
+}
+
+.t-product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    
+}
+
+.t-product .box-container .box {
+    text-align: center;
+    background-color:#fff;
+    position: relative;
+    border-radius: 3rem;
+    /* height: 60rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.t-product .box-container .box .box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.t-product .box-container .box .box-head .title{
+    font-size: 1.4rem;
+
+}
+
+.t-product .box-container .box .box-head .name{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+.t-product .box-container .box .box-head a{
+    text-decoration: none;
+    color: rgb(7, 2, 31);
+}
+
+.t-product .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2.5rem;
+}
+
+.t-product .box-container .box:hover img{
+    transform: scale(1.2);
+}
+.t-product .box-container .box .box-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    z-index: 10;
+}
+
+.t-product .box-container .box .box-bottom .info .price{
+ font-size: 3rem;
+ color: var(--main-color);
+}
+
+
+.t-product .box-container .box .product-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 0.2rem solid var(--main-color);
+}
+
+.t-product .box-container .box .product-btn a i{
+    color: var(--main-color);
+    
+}
+/* ! T-shirt Product End */
+
+
+/* * About Product start */
+
+.about .row{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+
+.about .row .image{
+    flex: 1 1 30rem;
+}
+
+.about .row img{
+    width: 100%;
+}
+
+.about .row .text{
+    flex: 1 1 40rem;
+}
+
+.about .row .text h3{
+    font-size: 3rem;
+}
+
+.about .row .text p{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+    
+}
+/* ! About Product End */
+
+ /* *Comments Section Start */
+
+
+ .comment{
+    background-color: rgb(205, 235, 227);
+ }
+
+ .comment .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /*? yan yana sıralamayı sağladı*/
+    gap: 1.5rem;
+}
+
+.comment .box-container .box{
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment .box-container .box .firstImg{
+    width: 100%;
+}
+
+.comment .box-container .box:hover .user{
+    transform: scale(1.2);
+}
+
+ .comment .box-container .box h3{
+    font-size: 2rem;
+    color: purple;
+ }
+
+ .comment .box-container .box p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    
+    
+ }
+ .comment .box-container .box .user{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+ }
+
+.comment .box-container .box .stars{
+    color: gold;
+}
+
+.comment .box-container .box .stars:hover{
+    transform: scale(1.2);
+}
+ /* !Comments Section End */
+
+ /* *Contact Us Section End */
+
+.contact .row {
+    display: flex;
+    background-color: black;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 2rem;
+}
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: 0.1rem solid gray;
+    border-radius: 3rem;
+}
+
+.contact .row form .inputBox i {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 1.5rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+ /* !Contact Us Section End */
+ 
+ 
+ /* *Blog  Section Start */
+ 
+ .blog .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+ }
+
+ .blog .box-container .box {
+    background-color: #fff;
+    border-radius: 3rem;
+ }
+ 
+ .blog .box-container .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+ }
+ 
+ .blog .box-container .box .image img{
+    height: 40rem;
+    object-fit: cover;
+    width: 100%;
+ }
+
+ .blog .box-container .box:hover .image img{
+    transform: scale(1.2);
+ }
+
+ .blog .box-container .box .content{
+    padding: 2rem;
+ }
+
+ .blog .box-container .box .content .title{
+    font-size: 3rem;
+    color: black;
+    line-height: 1.5;
+ }
+
+ .blog .box-container .box .content span {
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+ }
+
+ .blog .box-container .box .content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+ }
+ /* !Blog Section End */
+ 
+ 
+ /* *Footer Section Start */
+ 
+ .footer{
+    background-color: rgb(1, 18, 2);
+    text-align: center;
+ }
+ 
+ .footer .search{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+ }
+
+ .footer .search .search-input{
+    width: 20rem;
+    border-radius: 3rem;
+    padding-left: 2rem;
+    
+ }
+
+
+ .footer .search .btn{
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+ }
+
+ .footer .share{
+    padding: 2rem 0;
+ }
+
+ .footer .share a{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: #fff;
+    font-size: 20px;
+    border: 1px var(--hover-color);
+    border-radius: 50%;
+    margin: 2rem 1rem;
+ }
+
+ .footer .share a:hover{
+    background-color:var(--main-color);
+ }
+ .footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+   
+ }
+
+ .footer .links a{
+    background-color: var(--main-color);
+    padding: 0.7rem 2rem ;
+    border: 1px solid var(--main-color);
+    border-radius: 0.9rem;
+    color: #fff;
+    font-size: 2rem;
+ }
+
+ .footer .links a:hover{
+    background-color:rgb(1, 18, 2);
+    opacity: 0.7;
+ }
+
+ .footer .links a.active{
+    background-color:rgb(1, 18, 2);
+ }
+
+ .footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 1.5rem;
+ }
+
+ .footer .credit span{
+    color: var(--hover-color);
+ }
+ /* !Footer Section End */
+
+
+ /* *Responsive Start */
+
+ @media (max-width: 991px) {
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    .header .logo img{
+        height: 7rem;
+    }
+    section{
+        padding: 2rem;
+    }
+
+    .product .box-container .box .box-head .name{
+        font-size: 3.4rem;
+    }
+ }
+
+ @media (max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 95%;
+        background-color: #fff;
+        height: calc(100vh - 9rem);
+        width: 30rem;
+        box-shadow: 0px 20px 14px 0px rgba(0, 0, 0, 75);
+        right: -100%;
+    }
+    .header .navbar.active{
+        right: 3rem;
+    }
+    .header .navbar a{
+        color: black;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+ }
+
+ @media (max-width: 576px){
+    html{
+        font-size: 50%;
+    }
+/* 
+    .header #menu-btn{
+        display: inline-block;
+    } */
+ }
+
+
+ /* !Responsive End */
+
+

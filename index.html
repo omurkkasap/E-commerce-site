@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ! Sayfa Adı Yazılacak -->
+    <title>E-Ticaret Sitesi</title>
+    <!-- ! Sayfa Adı Yazılacak -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <!--* Header section start -->
+    <header class="header">
+      <a href="" class="">
+        <img class="logo" src="./img/logo.png" alt="Logo" />
+        <!--* Logo Eklenecek-->
+      </a>
+      <nav class="navbar ">
+        <a href="#home" class="n-home">Anasayfa</a>
+        <a href="#sweatshirt" class="n-sweatshirt">Sweatshirt</a>
+        <a href="#t-shirt" class="n-tshirt">T-shirt</a>
+        <a href="#about" class="n-about">Hakkımızda</a>
+        <a href="#comment" class="n-comment">Yorumlar</a>
+        <a href="#contact" class="n-contact">Bize Ulaşın</a>
+        <a href="#blog" class="n-blog">Blog</a>
+      </nav>
+      <div class="buttons">
+        <button id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        <button id="card-btn">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <button id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="search-form">
+        <input type="text" class="search-input" id="search-box" placeholder="Ara">
+        <i class="fas fa-search"></i>
+      </div>
+
+      <div class="card-items-container">
+        <div class="card-item">
+            <i class="fas fa-times"></i>
+            <img src="./img/bear.webp" alt="sweat">
+            <div class="content">
+                <h3>Card item 01</h3>
+                <div class="price">899.90₺</div>
+            </div>
+        </div>
+        <div class="card-item">
+            <i class="fas fa-times"></i>
+            <img src="./img/kutup.webp" alt="sweat">
+            <div class="content">
+                <h3>Card item 02</h3>
+                <div class="price">899.90₺</div>
+            </div>
+        </div>
+        <div class="card-item">
+            <i class="fas fa-times"></i>
+            <img src="./img/sincap.webp" alt="sweat">
+            <div class="content">
+                <h3>Card item 03</h3>
+                <div class="price">899.90₺</div>
+            </div>
+        </div>
+        <div class="card-item">
+            <i class="fas fa-times"></i>
+            <img src="./img/tilki.webp" alt="sweat">
+            <div class="content">
+                <h3>Card item 04</h3>
+                <div class="price">899.90₺</div>
+            </div>
+        </div>
+        <a href="#" class="btn">Sepete Ekle</a>
+      </div>
+    </header>
+    <!--! Header section end -->
+
+
+    <!-- * Home section start -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Yeşili Koruyoruz</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+          ab tempore repellendus harum dolorem corporis.
+        </p>
+
+        <a href="#" class="btn">Daha Fazlası</a>
+        <a href="#" class="btn">Satın Al</a>
+      </div>
+    </section>
+    <!-- ! Home section end -->
+
+    <!-- * sweatshirt Products Section Start -->
+    <section class="product" id="sweatshirt">
+      <h1 class="heading">Tüm <span>Sweatshirtler</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="box-head">
+            <img src="./img/tilki.webp" alt="Kaft" />
+            <span class="product-category">Sweatshirt</span>
+            <h3>WWF Sweatshirt</h3>
+            <div class="price">699.90₺ <span>810₺</span></div>
+          </div>
+          <div class="box-bottom">
+            <a href="#" class="btn">Sepete Ekle</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <img src="./img/bear.webp" alt="Kaft" />
+            <span class="product-category">Sweatshirt</span>
+            <h3>WWF Sweatshirt</h3>
+            <div class="price">899.90₺ <span>1200₺</span></div>
+          </div>
+          <div class="box-bottom">
+            <a href="#" class="btn">Sepete Ekle</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <img src="./img/sincap.webp" alt="Kaft" />
+            <span class="product-category">Sweatshirt</span>
+            <h3>WWF Sweatshirt</h3>
+            <div class="price">799.90₺ <span>990₺</span></div>
+          </div>
+          <div class="box-bottom">
+            <a href="#" class="btn">Sepete Ekle</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <img src="./img/kutup.webp" alt="Kaft" />
+            <span class="product-category">Sweatshirt</span>
+            <h3>Kaft Sweatshirt</h3>
+            <div class="price">499.90₺ <span>580₺</span></div>
+          </div>
+          <div class="box-bottom">
+            <a href="#" class="btn">Sepete Ekle</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! Sweatshirt Products Section End -->
+
+    <!-- * T-Shirt Products Section Start -->
+    <section class="t-product" id="t-shirt">
+      <h1 class="heading">Tüm <span>T-shirtler</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="box-head">
+            <span class="title">T-shirt</span>
+            <a href="#" class="name">Mavi t-shirt</a>
+          </div>
+          <div class="image">
+            <img src="./img/bluet.webp" alt="Blue" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">349₺</b>
+            </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <span class="title">T-shirt</span>
+            <a href="#" class="name">Yeşil t-shirt</a>
+          </div>
+          <div class="image">
+            <img src="./img/greent.webp" alt="Green" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">349₺</b>
+            </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <span class="title">T-shirt</span>
+            <a href="#" class="name">Sarı t-shirt</a>
+          </div>
+          <div class="image">
+            <img src="./img/yellowt.webp" alt="Yellow" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">349₺</b>
+            </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-head">
+            <span class="title">T-shirt</span>
+            <a href="#" class="name">Bizon t-shirt</a>
+          </div>
+          <div class="image">
+            <img src="./img/bizont.webp" alt="Bizon" />
+          </div>
+          <div class="box-bottom">
+            <div class="info">
+              <b class="price">349₺</b>
+            </div>
+            <div class="product-btn">
+              <a href="#">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! T-shirt  Products Section End -->
+
+    <!-- * About Section Start -->
+
+    <section class="about" id="about">
+      <h1 class="heading">Hakkımızda<span></span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="./img/greenWorld.jpeg" alt="Hakkımızda" />
+        </div>
+        <div class="text">
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Exercitationem modi repellat numquam obcaecati expedita labore nemo
+            commodi ratione dolore ipsam mollitia pariatur voluptatibus totam ea
+            voluptatum in quaerat, quo libero. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit.
+          </p>
+          <a href="#" class="btn">Daha Fazla</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! About Section End -->
+
+    <!-- *Comments Section Start -->
+    <section class="comment" id="comment">
+      <h1 class="heading">Kullanıcı <span>Yorumları</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="./img/comments.jpeg" alt="Yorum" class="firstImg" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est iusto
+            eligendi ex dolor commodi eos soluta quidem aut cumque. Assumenda ad
+            quas illo fugiat voluptatibus laborum nihil doloremque fuga
+            suscipit!
+          </p>
+          <img src="./img/pp1.jpeg" alt="Kullanıcı" class="user" />
+          <h3>Name Surname</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./img/comments.jpeg" alt="Yorum" class="firstImg" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est iusto
+            eligendi ex dolor commodi eos soluta quidem aut cumque. Assumenda ad
+            quas illo fugiat voluptatibus laborum nihil doloremque fuga
+            suscipit!
+          </p>
+          <img src="./img/pp2.jpeg" alt="Kullanıcı" class="user" />
+          <h3>Name Surname</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="./img/comments.jpeg" alt="Yorum" class="firstImg" />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est iusto
+            eligendi ex dolor commodi eos soluta quidem aut cumque. Assumenda ad
+            quas illo fugiat voluptatibus laborum nihil doloremque fuga
+            suscipit!
+          </p>
+          <img src="./img/pp3.jpeg" alt="Kullanıcı" class="user" />
+          <h3>Name Surname</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- !Comments Section End -->
+
+    <!-- *Contact Us Section Start -->
+    <section class="contact" id="contact">
+      <h1 class="heading">Bize <span>Ulaşın</span></h1>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.197622101681!2d29.1159207154124!3d40.955249379306146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac68ac20c7763%3A0xf62be475c4c59cb6!2zVHVya2NlbGwgS8O8w6fDvGt5YWzEsSBQbGF6YSBHZW5lbCBNw7xkw7xybMO8aw!5e0!3m2!1str!2str!4v1672917173657!5m2!1str!2str"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form>
+            <h3>Bize Yazın</h3>
+            <div class="inputBox">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="İsim">
+            </div>
+            <div class="inputBox">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <i class="fas fa-phone"></i>
+                <input type="number" placeholder="Tel No">
+            </div>
+            <input type="submit" class="btn" value="Bize Gönder">
+        </form>
+      </div>
+    </section>
+
+    <!-- !Contact Us Section End -->
+    
+    
+    <!-- *Blog Section Start -->
+
+    <section class="blog" id="blog">
+        <h1 class="heading">Blog <span></span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="./img/bizont.webp" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">T-shirtlerimizi Nasıl Yapıyoruz</a>
+                    <span>by Ömür / 14 Ekim 2022</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsum!</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./img/greent.webp" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">T-shirtlerimizi Nasıl Yapıyoruz</a>
+                    <span>by Ömür / 14 Ekim 2022</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsum!</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="./img/yellowt.webp" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="title">T-shirtlerimizi Nasıl Yapıyoruz</a>
+                    <span>by Ömür / 14 Ekim 2022</span>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ipsum!</p>
+                    <a href="#" class="btn">Daha Fazla</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- !Blog Section End -->
+
+
+    <!-- *Footer Section Start -->
+
+    <footer class="footer">
+        <div class="search">
+            <input type="text"
+            class="search-input"
+            placeholder="Ara">
+            <button class="btn btn-primary">Ara</button>
+        </div>
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook">
+            <a href="#" class="fab fa-twitter">
+            <a href="#" class="fab fa-instagram">
+            <a href="#" class="fab fa-linkedin">
+            <a href="#" class="fab fa-pinterest">
+                <i></i>
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="" class="active">Anasayfa</a>
+            <a href="">Sweatshirt</a>
+            <a href="">T-shirt</a>
+            <a href="">Hakkımızda</a>
+            <a href="">Yorumlar</a>
+            <a href="">Bize Ulaşın</a>
+            <a href="">Blog</a>
+        </div>
+
+    <div class="credit">
+        Credit by <span>Ömür Kasap</span> all rigths reserved
+    </div>
+    </footer>
+
+    
+    <!-- !Footer Section End -->
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
