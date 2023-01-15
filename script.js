@@ -50,63 +50,17 @@ menuBtn.addEventListener("click", function () {
 
 // * Navbar
 
-const home = document.querySelector(".n-home");
-const sweatshirt = document.querySelector(".n-sweatshirt");
-const tshirt = document.querySelector(".n-tshirt");
-const about = document.querySelector(".n-about");
-const comment = document.querySelector(".n-comment");
-const contact = document.querySelector(".n-contact");
-const blog = document.querySelector(".n-blog");
 
+const links = document.querySelectorAll(".nav-link");
 
-
-home.addEventListener("click", function(){
-    home.classList.add("active");
-    document.addEventListener("click", function(){
-        debugger;
-        if (
-            sweatshirt.addEventListener("click")
-            ) {
-            
-                home.classList.remove("active")
-                sweatshirt.classList.add("active");
-            }
+links.forEach((Link) =>{
+    Link.addEventListener("click", function() {
+        links.forEach((e) => {
+            e.classList.remove("active");
+        });
+        this.classList.add("active")
+        console.log(this);
     })
 })
 
-
-sweatshirt.addEventListener("click", function(){
-    sweatshirt.classList.add("active");
-
-})
-
-
-tshirt.addEventListener("click", function(){
-    tshirt.classList.add("active");
-
-})
-
-
-about.addEventListener("click", function(){
-    about.classList.add("active");
-
-})
-
-
-comment.addEventListener("click", function(){
-    comment.classList.add("active");
-
-})
-
-
-contact.addEventListener("click", function(){
-    contact.classList.add("active");
-
-})
-
-
-blog.addEventListener("click", function(){
-    blog.classList.add("active");
-
-})
 
